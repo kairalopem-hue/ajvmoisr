@@ -1,0 +1,37 @@
+/* Wave Reveal (Fluidez de Ola) */
+.wave-reveal {
+    opacity: 0;
+    transform: translateY(40px) skewY(2deg);
+    transition: opacity 1s var(--ease-wave), transform 1s var(--ease-wave);
+}
+
+.is-inview .wave-reveal,
+.is-inview.wave-reveal {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+}
+
+/* Efecto de Flotación (Agua) */
+.float-effect {
+    animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Image organic mask */
+.organic-mask {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    overflow: hidden;
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+    67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+}

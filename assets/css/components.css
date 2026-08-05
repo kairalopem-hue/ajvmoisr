@@ -1,0 +1,59 @@
+/* Botón Coral */
+.btn-coral {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: var(--clr-bg);
+    background-color: var(--clr-accent);
+    border-radius: 50px;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    border: 1px solid var(--clr-accent);
+}
+
+.btn-coral:hover {
+    background-color: transparent;
+    color: var(--clr-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px var(--clr-accent-dim);
+}
+
+/* Item de Menú Marino */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px dotted var(--clr-cyan);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    transition: transform var(--transition-fast);
+}
+
+.menu-item:hover {
+    transform: translateX(10px);
+}
+
+.menu-item__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-h3);
+    color: var(--clr-surface);
+}
+
+.menu-item__price {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--clr-accent);
+}
+
+.menu-item__desc {
+    color: var(--clr-text);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    display: block;
+    width: 100%;
+}

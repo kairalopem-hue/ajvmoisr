@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Carta | Marea Alta</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layouts.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/motion.css">
+</head>
+<body>
+    <header class="header scrolled">
+        <a href="index.html" class="nav__logo">MAREA ALTA.</a>
+        <nav>
+            <ul class="nav__list">
+                <li><a href="menu.html" class="nav__link" style="color: var(--clr-accent);">La Carta</a></li>
+                <li><a href="origen.html" class="nav__link">El Origen</a></li>
+                <li><a href="reservas.html" class="nav__link">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding-top: var(--space-xl);">
+        <section class="container section-pad-sm" style="max-width: 800px;">
+            <div class="wave-reveal" style="text-align: center; margin-bottom: var(--space-l);">
+                <h1 style="font-size: var(--text-h1); color: var(--clr-surface);">Carta del Mar</h1>
+                <p style="color: var(--clr-text); margin-top: 1rem;">Nuestra carta cambia cada 24 horas dependiendo de las mareas y el trabajo de nuestros pescadores.</p>
+            </div>
+            
+            <div class="wave-reveal" style="margin-bottom: var(--space-l);">
+                <h2 style="font-size: var(--text-h2); color: var(--clr-cyan); margin-bottom: 2rem; border-bottom: 1px solid var(--clr-surface-light); padding-bottom: 0.5rem; display: inline-block;">Conchas & Crudos</h2>
+                
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item__title">Ostras Especiales (Media Docena)</h3>
+                        <span class="menu-item__desc">Servidas sobre hielo pilé, mignonette de chalota y limón.</span>
+                    </div>
+                    <span class="menu-item__price">$24</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item__title">Ceviche de Corvina Salvaje</h3>
+                        <span class="menu-item__desc">Leche de tigre de ají amarillo, boniato asado y maíz chulpi crujiente.</span>
+                    </div>
+                    <span class="menu-item__price">$18</span>
+                </div>
+            </div>
+
+            <div class="wave-reveal" style="transition-delay: 0.2s;">
+                <h2 style="font-size: var(--text-h2); color: var(--clr-accent); margin-bottom: 2rem; border-bottom: 1px solid var(--clr-surface-light); padding-bottom: 0.5rem; display: inline-block;">Fuego & Brasa</h2>
+                
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item__title">Pulpo a la Brasa de Encina</h3>
+                        <span class="menu-item__desc">Parmentier de patata ahumada, pimentón de la Vera y aceite de oliva virgen extra.</span>
+                    </div>
+                    <span class="menu-item__price">$28</span>
+                </div>
+
+                <div class="menu-item">
+                    <div>
+                        <h3 class="menu-item__title">Langosta Entera Asada</h3>
+                        <span class="menu-item__desc">Mantequilla avellanada con cítricos, hierbas marinas y patatas baby asadas.</span>
+                    </div>
+                    <span class="menu-item__price">$65</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
